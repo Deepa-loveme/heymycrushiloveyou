@@ -1,0 +1,147 @@
+/* Basic Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+/* Fullscreen background */
+.fullscreen-bg {
+    background-image: url('https://plus.unsplash.com/premium_photo-1670585474404-46d6bea8152a?q=80&w=2369&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Centered container */
+.container {
+    z-index: 100;
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Message box */
+.message-box {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.reveal-btn {
+    background-color: #ff7f50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Hidden proposal section */
+#proposal {
+    display: none; /* Initially hidden */
+}
+
+/* Proposal styling */
+.main-proposal {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ff7f50;
+    margin-top: 30px;
+}
+
+.proposal-text {
+    font-size: 20px;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.response {
+    margin-top: 20px;
+}
+
+.yes-btn, .no-btn {
+    background-color: #ff7f50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0 10px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect: Change button text */
+.yes-btn:hover {
+    background-color: #ff5733; /* Darker shade when hovered */
+}
+
+.no-btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Response message styling */
+.response-message {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.response-text {
+    font-size: 20px;
+    color: #ff5733;
+}
+
+.response-text.positive {
+    color: #2ecc71;
+}
+
+.response-text.negative {
+    color: #ff5733;
+}
+
+.footer-text {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: white;
+}
+
+/* Heart emoji */
+.heart-text {
+    font-size: 48px;
+    color: red;
+}
+
+/* Initially hidden proposal */
+.hidden {
+    display: none;
+}

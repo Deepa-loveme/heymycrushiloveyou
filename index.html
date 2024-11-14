@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepa, A Special Question...</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Fullscreen Background Section -->
+    <div class="fullscreen-bg">
+        <div class="container">
+            <div class="message-box">
+                <h1 class="title">Hey Deepa, I've been thinking...</h1>
+                <p class="subtitle">I have something special to ask you...</p>
+                <button class="reveal-btn" onclick="showProposal()">Click to See</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Proposal Section -->
+    <section id="proposal" class="hidden">
+        <div class="container">
+            <h2 class="heart-text">❤️</h2>
+            <h2 class="main-proposal">Deepa,</h2>
+            <p class="proposal-text">
+                I’ve been thinking about this for a while… what if we start by just enjoying each other’s company and exploring the possibility of something special? No expectations, just fun and maybe something more if it feels right. 
+            </p>
+            <p class="proposal-text">
+                I’m all about being open and honest—so if things go well, maybe we could see where it takes us. You know, friends with a little extra *spark*. 
+                If that feels right, we can take it to the next level... But, hey, no pressure, I promise!
+            </p>
+            <p class="proposal-text">So, here’s the big question...</p>
+            <h2 class="main-proposal">Are you ready to join me on this adventure and see where it leads us? 💫</h2>
+            <div class="response">
+                <button class="yes-btn" onclick="showResponse('yes')">Yes</button>
+                <button class="no-btn" onmouseover="moveNoButton()" onmouseout="stopMovingNoButton()">No</button>
+            </div>
+            <div id="responseMessage" class="response-message"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p class="footer-text">&copy; 2024 A fun proposal made with care. 💕</p>
+    </footer>
+
+    <script>
+        let noButton = document.querySelector('.no-btn');
+        let responseMessage = document.getElementById('responseMessage');
+        
+        // Function to reveal the proposal message
+        function showProposal() {
+            document.getElementById('proposal').style.display = 'block';
+            document.querySelector('.fullscreen-bg').style.display = 'none';
+        }
+
+        // Function to handle the "Yes" response
+        function showResponse(answer) {
+            if (answer === 'yes') {
+                responseMessage.innerHTML = "<p class='response-text positive'>💍 Yes! I’m so happy you said yes! Let’s make this adventure amazing! 💕</p>";
+            }
+        }
+
+        // Function to make the "No" button move dynamically
+        function moveNoButton() {
+            noButton.style.position = 'absolute';
+            let maxX = window.innerWidth - noButton.offsetWidth;
+            let maxY = window.innerHeight - noButton.offsetHeight;
+
+            // Move the button to a random position within the window
+            let randomX = Math.random() * maxX;
+            let randomY = Math.random() * maxY;
+
+            noButton.style.left = randomX + 'px';
+            noButton.style.top = randomY + 'px';
+        }
+
+        // Function to stop moving the "No" button when mouse is not hovering
+        function stopMovingNoButton() {
+            // This function intentionally does nothing to keep the "No" button moving
+        }
+    </script>
+</body>
+</html>
